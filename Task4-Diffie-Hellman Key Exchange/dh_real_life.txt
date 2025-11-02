@@ -1,0 +1,9 @@
+Where Diffie–Hellman is used in practice:
+Diffie–Hellman (most commonly its ephemeral form, ECDHE) is used in the TLS handshake to agree on a fresh session key for
+HTTPS connections. It’s also a core building block in secure messaging protocols like the Signal Protocol (Double Ratchet),
+where DH is run repeatedly to derive new keys for each message.
+
+Why it’s important:
+DH lets two parties establish a shared secret over an insecure network without sending the secret itself.
+When used with ephemeral keys (ECDHE), it provides Perfect Forward Secrecy — even if a long-term key leaks later,
+past sessions remain confidential. This prevents passive eavesdroppers and limits the blast radius of future key compromise.
