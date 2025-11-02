@@ -1,0 +1,9 @@
+When we changed one letter in the file, the HMAC value completely changed.
+This happens because even a tiny modification in the message leads to a totally different hash output — a property called the avalanche effect.
+
+HMAC is important because it doesn’t just check integrity, it also verifies authenticity.
+Unlike a regular hash, which anyone can recalculate, HMAC requires a secret key.
+That means only someone who knows the shared key can generate the correct HMAC.
+If the message or key is changed, the verification fails immediately.
+
+In simple terms, HMAC helps make sure the data hasn’t been changed and that it really came from someone you trust.
